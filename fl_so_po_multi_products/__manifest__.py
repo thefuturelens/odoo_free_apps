@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
-
 {
     'name': 'SO & PO Multi Product Selection',
     'version': '11.0.1.0.0',

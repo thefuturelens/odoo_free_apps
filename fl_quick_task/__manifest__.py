@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
-
 {
     'name': 'Quick Task',
     'version': '11.0.1.0.0',
