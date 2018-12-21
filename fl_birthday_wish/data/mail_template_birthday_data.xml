@@ -1,0 +1,45 @@
+<?xml version="1.0" ?>
+<odoo>
+    <data noupdate="1">
+        <record id="email_birthday_wishes_employee_template" model="mail.template">
+            <field name="name">Birthday Wishes Template</field>
+            <field name="subject">Birthday Wishes ${object.name}</field>
+            <field name="email_from">${user.email|safe}</field>
+            <field name="email_to">${object.work_email|safe}</field>
+            <field name="model_id" ref="fl_birthday_wish.model_hr_employee"/>
+            <field name="auto_delete" eval="True"/>
+            <field name="body_html"><![CDATA[
+                <p>Dear ${object.name},</p>
+                <p>Date: ${object.birthday}</p>
+                <p>Happy Birthday..!</p>
+                <p>Wish You a very very Happy Birthday, ${object.name}.</p>
+                <p>Hope you have a great Year Ahead. Stay Healthy, Stay Happy.</p>
+                <p style="font-size: 12px;">
+                <br></br>
+                Wishes From : <strong>${user.company_id.name}</strong>
+                </p>
+            ]]>
+            </field>
+        </record>
+
+        <record id="email_birthday_wishes_partner_template" model="mail.template">
+            <field name="name">Birthday Wishes Template</field>
+            <field name="subject">Birthday Wishes ${object.name}</field>
+            <field name="email_from">${user.email|safe}</field>
+            <field name="email_to">${object.email|safe}</field>
+            <field name="model_id" ref="fl_birthday_wish.model_res_partner"/>
+            <field name="auto_delete" eval="True"/>
+            <field name="body_html"><![CDATA[
+                <p>Dear ${object.name},</p>
+                <p>Date: ${object.birthday}</p>
+                <p>Happy Birthday..!</p>
+                <p>Hope you have a great Year Ahead. Stay Healthy, Stay Happy.</p>
+                <p style="font-size: 12px;">
+                <br></br>
+                Wishes From : <strong>${user.company_id.name}</strong>
+                </p>
+            ]]>
+            </field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!--Create Quick Task-->
+    <record id="project_task_view_form_simplified" model="ir.ui.view">
+        <field name="name">project.task.view.form.simplified</field>
+        <field name="model">project.task</field>
+        <field name="arch" type="xml">
+            <form string="Task">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name" placeholder="Title"/>
+                            <field name="user_id" class="o_task_user_field" options='{"no_open": True}'/>
+                            <field name="project_id" domain="[('active', '=', True)]"/>
+                        </group>
+                        <group>
+                            <field name="planned_hours" widget="float_time"/>
+                            <field name="date_deadline"/>
+                        </group>
+                    </group>
+                    <group>
+                        <field name="description" type="html"/>
+                    </group>
+                    <footer>
+                        <button string="Create" name="create_task_dialog" type="object" class="btn-primary"/>
+                        <button string="Edit" name="edit_task_dialog" type="object" class="btn-primary"/>
+                        <button string="Discard" class="btn-default" special="cancel"/>
+                    </footer>
+
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="open_create_task" model="ir.actions.act_window">
+        <field name="name">Create Task</field>
+        <field name="res_model">project.task</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="project_task_view_form_simplified"/>
+        <field name="target">new</field>
+    </record>
+
+    <record id="view_task_kanban_inherit" model="ir.ui.view">
+        <field name="name">project.task.kanban.inherit</field>
+        <field name="model">project.task</field>
+        <field name="inherit_id" ref="project.view_task_kanban"/>
+        <field name="arch" type="xml">
+            <kanban position="attributes">
+                <attribute name="on_create">fl_quick_task.open_create_task</attribute>
+            </kanban>
+        </field>
+    </record>
+</odoo>
