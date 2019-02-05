@@ -1,6 +1,6 @@
 [run]
 branch = True
-source = hilarak/odoo_community_addons
+source = thefuturelens/odoo_free_apps
 
 [report]
 exclude_lines =
