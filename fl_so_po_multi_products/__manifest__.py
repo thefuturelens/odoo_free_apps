@@ -1,7 +1,6 @@
-# -*- coding: utf-8 -*-
 {
     'name': 'SO & PO Multi Product Selection',
-    'version': '11.0.1.0.0',
+    'version': '12.0.1.0.0',
     'category': 'Sales',
     'summary': 'Sale order and Purchase order Multiple Product Selection',
     'description': """
