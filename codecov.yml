@@ -1,6 +1,5 @@
 codecov:
   token: L9UJTpoZ39DIK5tBIpL1
-codecov:
   notify:
     require_ci_to_pass: yes
 
