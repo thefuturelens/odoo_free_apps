@@ -1,2 +1,1 @@
-Birthday Wishes Module for Odoo 12
-
+Birthday Wishes Module for Odoo 11
