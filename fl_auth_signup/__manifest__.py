@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 {
     'name': 'Auth Signup Form',
     'version': '11.0.1.0.0',
