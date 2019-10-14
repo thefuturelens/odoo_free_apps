@@ -1,6 +1,6 @@
 {
     'name': 'Quick Task',
-    'version': '11.0.1.0.0',
+    'version': '13.0.1.0.0',
     'category': 'Project',
     'summary': 'Create Quick Task for Project',
     'description': """
@@ -13,9 +13,6 @@
     'data': [
         'views/project_view.xml',
     ],
-    'qweb': [],
-    'css': [],
-    'js': [],
     'images': [
         'static/description/quick_task_banner.png',
     ],

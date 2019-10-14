@@ -7,11 +7,9 @@ class ProjectTask(models.Model):
 
     date_deadline = fields.Date(string='Deadline', default=lambda self: fields.Date.today())
 
-    @api.multi
     def create_task_dialog(self):
         return {'type': 'ir.actions.act_window_close'}
 
-    @api.multi
     def edit_task_dialog(self):
         form_view = self.env.ref('project.view_task_form2')
         return {

@@ -1,6 +1,6 @@
 {
     'name': 'Birthday Wishes',
-    'version': '11.0.1.0.0',
+    'version': '13.0.1.0.0',
     'category': 'Contacts',
     'summary': 'Birthday Wishes for Employee, Customer',
     'description': """
@@ -18,9 +18,6 @@
         'data/mail_template_birthday_data.xml',
         'views/res_partner_view.xml',
     ],
-    'qweb': [],
-    'css': [],
-    'js': [],
     'images': [
         'static/description/birthday_wishes_banner.png',
     ],

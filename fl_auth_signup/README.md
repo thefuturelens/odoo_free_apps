@@ -1,1 +1,1 @@
-Auth Signup Form for Odoo 11
+Auth Signup Form for Odoo 13

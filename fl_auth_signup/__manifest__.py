@@ -1,6 +1,6 @@
 {
     'name': 'Auth Signup Form',
-    'version': '11.0.1.0.0',
+    'version': '13.0.1.0.0',
     'category': 'Website',
     'summary': 'Auth signup form with extra fields',
     'description': """
@@ -17,9 +17,6 @@
         'views/auth_signup_extend_views.xml',
         'views/res_partner_view.xml',
     ],
-    'qweb': [],
-    'css': [],
-    'js': [],
     'images': [
         'static/description/auth_signup_banner.png',
     ],

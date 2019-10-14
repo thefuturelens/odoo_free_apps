@@ -1,6 +1,6 @@
 {
     'name': 'SO & PO Multi Product Selection',
-    'version': '11.0.1.0.0',
+    'version': '13.0.1.0.0',
     'category': 'Sales',
     'summary': 'Sale order and Purchase order Multiple Product Selection',
     'description': """
@@ -19,9 +19,6 @@
         'views/purchase_views.xml',
         'security/ir.model.access.csv'
     ],
-    'qweb': [],
-    'css': [],
-    'js': [],
     'images': [
         'static/description/so_po_multi_product_banner.png',
     ],
