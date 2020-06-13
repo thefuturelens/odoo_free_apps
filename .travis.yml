@@ -2,7 +2,7 @@ language: python
 
 python:
   - "3.5"
-  
+ 
 addons:
   postgresql: "9.6" # 12 needs postgres v > 9.5
   apt:
