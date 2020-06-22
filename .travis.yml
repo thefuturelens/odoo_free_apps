@@ -1,12 +1,13 @@
 language: python
 
+dist: xenial
+
 python:
-  - "3.5"
+  - "3.6"
 
 notifications:
   email: false
   
-sudo: false
 cache: pip
 
 addons:
@@ -35,7 +36,7 @@ install:
   - travis_install_nightly
 
 script:
-  - travis_run_tests
+  - pytest
 
 after_success:
 - codecov -f coverage.xml
