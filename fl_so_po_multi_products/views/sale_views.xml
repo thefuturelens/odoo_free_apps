@@ -6,11 +6,9 @@
         <field name="inherit_id" ref="sale.view_order_form"/>
         <field name="arch" type="xml">
             <xpath expr="//field[@name='order_line']" position="before">
-                <group>
-                    <button name="%(act_open_select_products_view)d" type="action" string="Select Products"
-                        context="{'default_flag_order': 'so'}" attrs="{'invisible': [('state', '!=', 'draft')]}"
-                        class="oe_highlight" />
-                </group>
+                <button name="%(act_open_select_products_view)d" type="action" string="Select Products"
+                    context="{'default_flag_order': 'so'}" attrs="{'invisible': [('state', '!=', 'draft')]}"
+                    class="btn-primary mb-3"/>
             </xpath>
         </field>
     </record>

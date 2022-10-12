@@ -1,1 +1,1 @@
-SO & PO Multi Product Selection for Odoo 15
+SO & PO Multi Product Selection for Odoo 16

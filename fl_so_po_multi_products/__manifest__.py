@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 {
     'name': 'SO & PO Multi Product Selection',
-    'version': '15.0.1.0.0',
-    'category': 'Sales',
+    'version': '16.0.1.0.0',
+    'category': 'Sales/Sales',
     'summary': 'Sale order and Purchase order Multiple Product Selection',
     'description': """
         This module provide select multiple products
