@@ -25,11 +25,14 @@ class SelectProducts(models.TransientModel):
         elif self.flag_order == 'po':
             order_id = self.env['purchase.order'].browse(self._context.get('active_id', False))
             for product in self.product_ids:
+                product_name = product.display_name
+                if product.description_purchase:
+                    product_name += '\n' + product.description_purchase
                 self.env['purchase.order.line'].create({
                     'product_id': product.id,
-                    'name': product.name,
+                    'name': product_name,
                     'date_planned': order_id.date_planned or datetime.today().strftime(DEFAULT_SERVER_DATETIME_FORMAT),
-                    'product_uom': product.uom_id.id,
+                    'product_uom': product.uom_po_id.id if product.uom_po_id else product.uom_id.id,
                     'price_unit': product.lst_price,
                     'product_qty': 1.0,
                     'display_type': False,
